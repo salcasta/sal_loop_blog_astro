@@ -5,6 +5,8 @@ import Navigation from "../components/Navigation.astro";
 
 import Footer from "../components/Footer.astro";
 
+import Header from "../components/Header.astro";
+
 const pageTitle = "Home Page";
 ---
 
@@ -17,9 +19,12 @@ const pageTitle = "Home Page";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<nav>
-			<Navigation />
-		</nav>
+		<header>
+			<Header />
+			<nav>
+				<Navigation />
+			</nav>
+		</header>
 
 		<h1>{pageTitle}</h1>
 
