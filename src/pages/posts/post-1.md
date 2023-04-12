@@ -1,6 +1,8 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
+
 title: 'My First Blog Post'
-pubDate: 2023-04-09
+pubDate: 04-09-2023
 description: 'This is the first post of my new Astro blog.'
 author: salcasta
 image:
@@ -8,9 +10,6 @@ image:
     alt: 'The Astro logo with the word One.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-# My First Blog Post
-
-Published on: 2023-04-09
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
