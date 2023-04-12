@@ -18,17 +18,34 @@ const pageTitle = "Home Page";
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!--chicago blue rgb(182, 219, 233)  
+			chicago red  rgb(255, 0, 0)
+		-->
+
 		<style>
 			body {
-				margin: 0 auto;
+				height: 100vh;
+				margin: 0;
 				padding: 0;
+			}
+
+			.pageTitle {
+				display: flex;
+				justify-content: center;
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<Navigation />
-		<h1>{pageTitle}</h1>
+		<h1 class="pageTitle">{pageTitle}</h1>
 		<Footer />
 	</body>
 </html>
