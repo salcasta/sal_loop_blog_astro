@@ -2,17 +2,186 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
-const pageTitle = "My Astro Learning Blog";
+const pageTitle = "Blog";
 ---
 
-<BaseLayout>
-    <p>This is my blog section!</p>
+<head>
+    <title>{pageTitle}</title>
+</head>
 
-    <ul>
+<BaseLayout>
+    <div class="container h-64 w-auto md:mx-auto">
+        <img class="" src="/blog_bg.jpg" alt="Chicago Theatre" />
+    </div>
+
+    <div class="container flex justify-around flex-wrap">
+        <div
+            class="mx-1 mt-3 mb-1 py-1 px-1 min-w-min border border-0 rounded-lg bg-chicagoBlue"
+        >
+            <a href="#week1"
+                ><span
+                    class="text-center text-base text-chicagoRed mx-2 my-1 pl-2"
+                    >Week 1</span
+                ></a
+            >
+            <span class="block text-center text-sm text-white font-bold"
+                >June 5th-9th</span
+            >
+        </div>
+
+        <div
+            class="mx-1 mt-3 mb-1 py-1 px-1 min-w-min border border-0 rounded-lg bg-chicagoBlue"
+        >
+            <span class="text-center text-base text-chicagoRed mx-2 my-1 pl-2"
+                >Week 2</span
+            >
+            <span class="block text-center text-sm text-white font-bold"
+                >June 5th-9th</span
+            >
+        </div>
+
+        <div
+            class="mx-1 mt-3 mb-1 py-1 px-1 min-w-min border border-0 rounded-lg bg-chicagoBlue"
+        >
+            <span class="text-center text-base text-chicagoRed mx-2 my-1 pl-2"
+                >Week 3</span
+            >
+            <span class="block text-center text-sm text-white font-bold"
+                >June 5th-9th</span
+            >
+        </div>
+
+        <div
+            class="mx-1 mt-3 mb-1 py-1 px-1 min-w-min border border-0 rounded-lg bg-chicagoBlue"
+        >
+            <span class="text-center text-base text-chicagoRed mx-2 my-1 pl-2"
+                >Week 4</span
+            >
+            <span class="block text-center text-sm text-white font-bold"
+                >June 5th-9th</span
+            >
+        </div>
+    </div>
+
+    <div
+        id="week1"
+        class="container mt-8 text-chicagoRed border-y-8 border-chicagoBlue"
+    >
+        <h2 class="text-center text-3xl">Week 1</h2>
+        <h6 class="text-center text-base block">June 5th - 9th</h6>
+    </div>
+
+    <div>
+        <a
+            href="#"
+            class="mt-4 mb-8 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100"
+        >
+            <img
+                class="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                src="/brisket.JPG"
+                alt="Sliced Brisket"
+            />
+            <div
+                class="flex flex-col justify-between min-w-full p-4 leading-normal bg-chicagoBlue"
+            >
+                <h5
+                    class="mb-2 text-2xl font-bold tracking-tight text-chicagoRed"
+                >
+                    Amazing brisket from South Berwyn
+                </h5>
+                <h6 class="mt-2 mb-3">
+                    <span
+                        class="p-1 font-extralight leading-loose text-white bg-bearsBlue border border-bearsBlue"
+                    >
+                        April 20, 2023
+                    </span>
+                </h6>
+                <p class="mb-3 font-normal text-lg text-black">
+                    Decided to try this new spot in South Berwyn. The brisket
+                    was speaking to me the second I walked in.
+                </p>
+
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-white bg-bearsBlue mr-2 mb-2"
+                    >
+                        #food
+                    </span>
+                    <span
+                        class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-white bg-bearsBlue mr-2 mb-2"
+                    >
+                        #bbq
+                    </span>
+                    <span
+                        class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-white bg-bearsBlue mr-2 mb-2"
+                    >
+                        #southberwyn
+                    </span>
+                    <span
+                        class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-white bg-bearsBlue mr-2 mb-2"
+                    >
+                        #brisket
+                    </span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div>
+        <a
+            href="#"
+            class="my-8 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100"
+        >
+            <img
+                class="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                src="/mich.PNG"
+                alt="Michelada"
+            />
+            <div
+                class="flex flex-col justify-between min-w-full p-4 leading-normal bg-chicagoBlue"
+            >
+                <h5
+                    class="mb-2 text-2xl font-bold tracking-tight text-chicagoRed"
+                >
+                    Refreshing michelada after work
+                </h5>
+                <h6 class="mt-2 mb-3">
+                    <span
+                        class="p-1 font-extralight leading-loose text-white bg-bearsBlue border border-bearsBlue"
+                    >
+                        April 19, 2023
+                    </span>
+                </h6>
+                <p class="mb-3 font-normal text-lg text-black">
+                    After a hard day of studying, needed a drink.
+                </p>
+
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-white bg-bearsBlue mr-2 mb-2"
+                    >
+                        #drink
+                    </span>
+                    <span
+                        class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-white bg-bearsBlue mr-2 mb-2"
+                    >
+                        #beercocktail
+                    </span>
+                    <span
+                        class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-white bg-bearsBlue mr-2 mb-2"
+                    >
+                        #loop
+                    </span>
+                </div>
+            </div>
+        </a>
+    </div>
+</BaseLayout>
+
+<!-- <ul>
         {
             allPosts.map((post) => (
                 <BlogPost url={post.url} title={post.frontmatter.title} />
             ))
         }
-    </ul>
-</BaseLayout>
+    </ul> -->
