@@ -8,7 +8,7 @@ image:
     url: "https://astro.build/assets/blog/astro-showcase/astro-showcase-screenshot.jpg"
     alt: "Thumbnails of websites from the Astro Showcase site."
 pubDate: 2023-04-09
-tags: ["astro", "blogging", "learning in public", "successes", "test"]
+tags: ["astro", "blogging", "learninginpublic", "successes", "test"]
 ---
 
 ## What I've accomplished

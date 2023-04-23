@@ -2,85 +2,42 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "About Me";
-
-const identity = {
-    firstName: "Sal",
-    state: "Illinois",
-    occupation: "Developer",
-    hobbies: ["coding", "reading history", "learning/making electronics"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = false;
-const goal = 3;
-
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
 
 <head>
-    <style define:vars={{ skillColor, fontWeight, textCase }}>
-        h2 {
-            color: purple;
-            font-size: 4rem;
-        }
-
-        .skill {
-            color: var(--skillColor);
-            font-weight: var(--fontWeight);
-            text-transform: var(--textCase);
-        }
-    </style>
+    <title>{pageTitle}</title>
 </head>
 
-<BaseLayout pageTitle={pageTitle}>
-    <h2>Hi! I am Sal and this is my new Astro site!</h2>
+<BaseLayout>
+    <div class="container h-64 w-auto md:mx-auto">
+        <img src="/chicago_flag.jpeg" alt="Chicago Flag" />
+    </div>
 
-    <p>
-        I am working through Astro's introductory tutorial. This is the second
-        page on my website, and it's the first one I built myself!
-    </p>
+    <div class="container flex justify-center">
+        <h2 class="uppercase font-semibold text-2xl text-chicagoRed">
+            About this blog
+        </h2>
+    </div>
 
-    <p>
-        This site will update as I complete more of the tutorial, so keep
-        checking back and see how my journey is going!
-    </p>
-
-    <p>Here are a few facts about me:</p>
-
-    <ul>
-        <li>My name is {identity.firstName}.</li>
-        <li>
-            I live in {identity.state} and I work as a {identity.occupation}.
-        </li>
-        {
-            identity.hobbies.length >= 2 && (
-                <li>
-                    Two of my hobbies are: {identity.hobbies[0]} and{" "}
-                    {identity.hobbies[1]}
-                </li>
-            )
-        }
-    </ul>
-
-    <p>My skills are:</p>
-
-    <ul>
-        {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
-
-    {happy && <p>I am happy to be learning Astro!</p>}
-
-    {finished && <p>I finished this tutorial!</p>}
-
-    {
-        goal === 3 ? (
-            <p>My goal is to finish in 3 days.</p>
-        ) : (
-            <p>My goal is not 3 days.</p>
-        )
-    }
+    <div class="container">
+        <p
+            class="mt-4 mx-5 leading-loose font-normal text-lg text-left text-base text-black"
+        >
+            Hi, I am Sal! I decided to do this blog to record my experiences in
+            the loop as an office worker. Working in the restaurant industry for
+            over 15 years I was ready for a change. In 2022 I started to work
+            towards that change. The online program 100devs prepared me
+            immensely and in 2023 I was fortunate enough to be accepted into the
+            DPI Tech Apprenticeship program. It is a 3 month long paid program
+            where I am taught various languages that employers are utilizing.
+            After the 3 months I am placed with a tech company as an apprentice
+            to learn and work hands on for 9 months. Hopefully at that point I
+            am retained as a regular employee. Although I am confident in my
+            abilities, I do not want to take this opportunity for granted. So, I
+            am here to try any foodhall, lunch spot, coffee shop, juice bar, and
+            happy hour bar in and around the loop area. Hopefully this will not
+            just be a 3 month long experience. Come along as I show you the best
+            of what the loop has to offer its workers!
+        </p>
+    </div>
 </BaseLayout>

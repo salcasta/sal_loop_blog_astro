@@ -5,34 +5,26 @@ const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 const pageTitle = "Tag Index";
 ---
 
-<style>
-    a {
-        color: #00539f;
-    }
+<head>
+    <title>{pageTitle}</title>
+</head>
 
-    .tags {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 auto;
-    }
+<BaseLayout>
+    <div class="container h-64 w-auto md:mx-auto">
+        <img class="" src="/hashtags.png" alt="Hashtags" />
+    </div>
 
-    .tag {
-        margin: 0.25em;
-        border: dotted 1px #a1a1a1;
-        border-radius: 0.5em;
-        padding: 0.5em 1em;
-        font-size: 1.15em;
-        background-color: #f8fcfd;
-    }
-</style>
-
-<BaseLayout pageTitle={pageTitle}>
-    <div class="tags">
+    <div class="container flex flex-wrap">
         {
             tags.map((tag) => (
-                <p class="tag">
-                    <a href={`/tags/${tag}`}>{tag}</a>
-                </p>
+                <div class="flex items-center mx-2 mb-3 w-28 min-w-min border border-0 rounded-full bg-chicagoBlue">
+                    <i class="fa-solid fa-hashtag text-4xl text-white ml-2 mr-1 my-1 pl-2" />
+                    <div>
+                        <span class="text-chicagoRed font-bold pr-2">
+                            <a href={`/tags/${tag}`}>{tag}</a>
+                        </span>
+                    </div>
+                </div>
             ))
         }
     </div>

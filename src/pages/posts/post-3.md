@@ -8,7 +8,7 @@ image:
     url: "https://astro.build/assets/blog/community-day/cover.jpg"
     alt: "The word community with a heart."
 pubDate: 2023-04-09
-tags: ["astro", "learning in public", "setbacks", "community"]
+tags: ["astro", "learninginpublic", "setbacks", "community"]
 ---
 ## Fighting Through The Hurdles 
 

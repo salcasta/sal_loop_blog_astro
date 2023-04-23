@@ -3,6 +3,124 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Home Page";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-	<h2>My awesome blog subtitle</h2>
+<head>
+	<title>{pageTitle}</title>
+</head>
+
+<BaseLayout>
+	<div class="container h-64 w-auto md:mx-auto">
+		<img src="/main_bg.jpg" alt="Chicago Bean" />
+	</div>
+
+	<div
+		class="container flex justify-center mt-12 text-2xl text-chicagoRed lowercase border-y-8 border-chicagoBlue"
+	>
+		<h2>#Featuredposts</h2>
+	</div>
+
+	<div>
+		<a
+			href="#"
+			class="my-8 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100"
+		>
+			<img
+				class="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+				src="/brisket.JPG"
+				alt="Sliced Brisket"
+			/>
+			<div
+				class="flex flex-col justify-between min-w-full p-4 leading-normal bg-chicagoBlue"
+			>
+				<h5
+					class="mb-2 text-2xl font-bold tracking-tight text-chicagoRed"
+				>
+					Amazing brisket from South Berwyn
+				</h5>
+				<h6 class="mt-2 mb-3">
+					<span
+						class="p-1 font-extralight leading-loose text-white bg-bearsBlue border border-bearsBlue"
+					>
+						April 20, 2023
+					</span>
+				</h6>
+				<p class="mb-3 font-normal text-lg text-black">
+					Decided to try this new spot in South Berwyn. The brisket
+					was speaking to me the second I walked in.
+				</p>
+
+				<div class="px-6 pt-4 pb-2">
+					<span
+						class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-white bg-bearsBlue mr-2 mb-2"
+					>
+						#food
+					</span>
+					<span
+						class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-white bg-bearsBlue mr-2 mb-2"
+					>
+						#bbq
+					</span>
+					<span
+						class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-white bg-bearsBlue mr-2 mb-2"
+					>
+						#southberwyn
+					</span>
+					<span
+						class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-white bg-bearsBlue mr-2 mb-2"
+					>
+						#brisket
+					</span>
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<div>
+		<a
+			href="#"
+			class="my-8 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100"
+		>
+			<img
+				class="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+				src="/mich.PNG"
+				alt="Michelada"
+			/>
+			<div
+				class="flex flex-col justify-between min-w-full p-4 leading-normal bg-chicagoBlue"
+			>
+				<h5
+					class="mb-2 text-2xl font-bold tracking-tight text-chicagoRed"
+				>
+					Refreshing michelada after work
+				</h5>
+				<h6 class="mt-2 mb-3">
+					<span
+						class="p-1 font-extralight leading-loose text-white bg-bearsBlue border border-bearsBlue"
+					>
+						April 19, 2023
+					</span>
+				</h6>
+				<p class="mb-3 font-normal text-lg text-black">
+					After a hard day of studying, needed a drink.
+				</p>
+
+				<div class="px-6 pt-4 pb-2">
+					<span
+						class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-white bg-bearsBlue mr-2 mb-2"
+					>
+						#drink
+					</span>
+					<span
+						class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-white bg-bearsBlue mr-2 mb-2"
+					>
+						#beercocktail
+					</span>
+					<span
+						class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-white bg-bearsBlue mr-2 mb-2"
+					>
+						#loop
+					</span>
+				</div>
+			</div>
+		</a>
+	</div>
 </BaseLayout>
