@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <section class="flex flex-col md:gap-y-4">
+        <div class="border border-black w-full h-1/6 md:container md:mx-auto">
+            <h2 class="text-center">Header</h2>
+        </div>
+        <div class="container border border-black mx-auto w-full max-w-lg">
+            <h2 class="text-center">Picture</h2>
+        </div>
+        <div class="border border-black w-screen h-1/6 mt-3 md:container md:mx-auto">
+            <h2 class="text-center">Banner</h2>
+        </div>
+
+        <div class="md:flex md:flex-row md:flex-wrap md:justify-around">
+            <div class="border border-black w-40 h-72 mt-3 mx-auto md:flex-row md:flex-wrap">
+                <h2 class="text-center">Card</h2>
+            </div>
+            <div class="border border-black w-40 h-72 mt-3 mx-auto md:flex-row md:flex-wrap">
+                <h2 class="text-center">Card</h2>
+            </div>
+            <div class="border border-black w-40 h-72 mt-3 mx-auto md:flex-row md:flex-wrap md:basis-full">
+                <h2 class="text-center">Card</h2>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
